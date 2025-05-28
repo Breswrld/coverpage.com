@@ -131,7 +131,12 @@ main {
 
 /* --- Mobile Styles --- */
 @media screen and (max-width: 900px) {
-
+.hamburger.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
    
    header {
         display: block;
@@ -175,14 +180,8 @@ main {
     .navItems li {
         text-align: left;
         margin: 10px 0;
-	    width: 100%;
-        padding: 15px 20px;
     }
-.navItems li a {
-    font-size: 18px;
-    display: block;
-    width: 100%;
-}
+
     .links {
         display: none;
     }
